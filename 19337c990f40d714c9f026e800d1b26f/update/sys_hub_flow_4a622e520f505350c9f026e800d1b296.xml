@@ -1,0 +1,1723 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=25873000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>3e841ec43b985b1043fee5ac24e45abe</copied_from>
+        <copied_from_name>RITM - Claude (Add user to Entra</copied_from_name>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>ritm__filemaker_add_user_to_entra_id_group</internal_name>
+        <label_cache>[{"name":"subflow.group_name","label":"Input➛Group Name","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"28151e67-fc14-491c-8303-3bd1855d12f5":["work_notes"],"64b51c77-367d-4790-90b5-eee47dd49c1e":["work_notes"],"2e5370a7-a467-414f-a36f-63e450caeda7":["work_notes"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d41a29e1-c70e-4906-ac06-b1471b601e32","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"55aed042-6aaf-4b2b-a0af-64305890d5bb.error_message","label":"2 - Add User to Entra ID Group➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","usedInstances":{"5ddc9979-03ec-43ce-aba0-d0d922e2d1ff":["work_notes"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"65321ddb-2f3d-46d8-8494-3b8bee3daab8"}},{"name":"subflow.requested_user.name","label":"Input➛Requested User➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"28151e67-fc14-491c-8303-3bd1855d12f5":["work_notes"],"64b51c77-367d-4790-90b5-eee47dd49c1e":["work_notes"],"2e5370a7-a467-414f-a36f-63e450caeda7":["work_notes"]}},{"name":"subflow.requested_item","label":"Input➛Requested Item","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","column_name":"","usedInstances":{"28151e67-fc14-491c-8303-3bd1855d12f5":["record"],"64b51c77-367d-4790-90b5-eee47dd49c1e":["record"],"5ddc9979-03ec-43ce-aba0-d0d922e2d1ff":["record"],"2e5370a7-a467-414f-a36f-63e450caeda7":["record"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7cb46e48-8d54-4eec-ad10-0b65ec077ee0","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"55aed042-6aaf-4b2b-a0af-64305890d5bb.status_code","label":"2 - Add User to Entra ID Group➛Status Code","reference_display":"Status Code","type":"string","base_type":"string","usedInstances":{"0625720b-4815-4795-9a89-51377da3b72d":["condition"],"42539489-e150-45e9-afd1-7b3f393c3c3e":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b2343d83-76a3-41b3-a912-7edb8138d3dd"}},{"name":"subflow.requested_user.u_upn","label":"Input➛Requested User➛UPN","reference":"","reference_display":"UPN","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"u_upn","usedInstances":{"55aed042-6aaf-4b2b-a0af-64305890d5bb":["user_upn"]}},{"name":"subflow.requested_user","label":"Input➛Requested User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","usedInstances":{"28151e67-fc14-491c-8303-3bd1855d12f5":["work_notes"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"28aa5c01-086b-44ef-96d1-a9d010cc303b","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.group_id","label":"Input➛Group ID","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"55aed042-6aaf-4b2b-a0af-64305890d5bb":["group_id"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"3610fb19-cd29-4675-a0a9-7d0994ac0697","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.upn","label":"Input➛UPN","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"55aed042-6aaf-4b2b-a0af-64305890d5bb":["user_upn"],"d9cb25e3-1440-4773-bd88-395b6aa6419a":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"21e6284a-68a3-487a-a347-242b4892c0c1","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]</label_cache>
+        <master_snapshot>07a2aed20f505350c9f026e800d1b243</master_snapshot>
+        <master_snapshot_digest/>
+        <name>RITM - Filemaker (Add user to Entra ID group)</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:15:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>4a622e520f505350c9f026e800d1b296</sys_id>
+        <sys_mod_count>47</sys_mod_count>
+        <sys_name>RITM - Filemaker (Add user to Entra ID group)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="FileMaker Application" source="x_sogs_filemaker_a">19337c990f40d714c9f026e800d1b26f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name>sys_hub_flow_4a622e520f505350c9f026e800d1b296</sys_update_name>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:26:20</sys_updated_on>
+        <type>subflow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>60254caa3b90539043fee5ac24e45a0e</version_record>
+    </sys_hub_flow>
+    <sys_variable_value action="delete_multiple" query="document_key=4a622e520f505350c9f026e800d1b296"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=4a622e520f505350c9f026e800d1b296"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=4a622e520f505350c9f026e800d1b296^sys_idNOT IN42622e520f505350c9f026e800d1b299"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>4a622e520f505350c9f026e800d1b296</id>
+        <name>RITM - Filemaker (Add user to Entra ID group)</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:15:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>42622e520f505350c9f026e800d1b299</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 07:15:02</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=42622e520f505350c9f026e800d1b299"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=4a622e520f505350c9f026e800d1b296^sys_idNOT IN04110cee3b50539043fee5ac24e45a83,0c309b163b58139043fee5ac24e45a5f,4e622e520f505350c9f026e800d1b2af,649226d20f505350c9f026e800d1b223"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=21e6284a-68a3-487a-a347-242b4892c0c1</attributes>
+        <audit>false</audit>
+        <calculation>(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);</calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>upn</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>UPN</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="RITM - Filemaker (Add user to Entra ID group)">4a622e520f505350c9f026e800d1b296</model>
+        <model_id>4a622e520f505350c9f026e800d1b296</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_4a622e520f505350c9f026e800d1b296</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 14:08:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>04110cee3b50539043fee5ac24e45a83</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:09:04</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=04110cee3b50539043fee5ac24e45a83"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=d41a29e1-c70e-4906-ac06-b1471b601e32</attributes>
+        <audit>false</audit>
+        <calculation>(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);</calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>group_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Group Name</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="RITM - Filemaker (Add user to Entra ID group)">4a622e520f505350c9f026e800d1b296</model>
+        <model_id>4a622e520f505350c9f026e800d1b296</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_4a622e520f505350c9f026e800d1b296</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 10:35:03</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0c309b163b58139043fee5ac24e45a5f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:08:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0c309b163b58139043fee5ac24e45a5f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=7cb46e48-8d54-4eec-ad10-0b65ec077ee0</attributes>
+        <audit>false</audit>
+        <calculation>(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);</calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sc_req_item</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>requested_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Requested Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="RITM - Filemaker (Add user to Entra ID group)">4a622e520f505350c9f026e800d1b296</model>
+        <model_id>4a622e520f505350c9f026e800d1b296</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_4a622e520f505350c9f026e800d1b296</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:15:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4e622e520f505350c9f026e800d1b2af</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:08:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4e622e520f505350c9f026e800d1b2af"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=3610fb19-cd29-4675-a0a9-7d0994ac0697</attributes>
+        <audit>false</audit>
+        <calculation>(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);</calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>group_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Group ID</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="RITM - Filemaker (Add user to Entra ID group)">4a622e520f505350c9f026e800d1b296</model>
+        <model_id>4a622e520f505350c9f026e800d1b296</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_4a622e520f505350c9f026e800d1b296</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:15:45</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>649226d20f505350c9f026e800d1b223</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:08:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=649226d20f505350c9f026e800d1b223"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=4a622e520f505350c9f026e800d1b296"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4a622e520f505350c9f026e800d1b296"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=4a622e520f505350c9f026e800d1b296"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=4a622e520f505350c9f026e800d1b296^sys_idNOT IN6a626e520f505350c9f026e800d1b269,62626e520f505350c9f026e800d1b26a,62626e520f505350c9f026e800d1b26b,aa626e520f505350c9f026e800d1b268,6a626e520f505350c9f026e800d1b26a"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">4a622e520f505350c9f026e800d1b296</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>0625720b-4815-4795-9a89-51377da3b72d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:15:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6a626e520f505350c9f026e800d1b269</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:27:16</sys_updated_on>
+        <ui_id>28151e67-fc14-491c-8303-3bd1855d12f5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1WXW/aMBT9K5afUZQQQMBbVcZUqR9T2/WldJGJb8CqY6e2U8pQ//tunARQW3VU6ku18YTvl885PnFyu6GC0zHtAQ+jUTRI4yiOu2HYHfai+SCeR10eM4CIdqhiOWClgVQbjutHJssqsNnYcp5JvQoMPJRgHfBEOMifn7GIC1tItr5pajGSLoXkBhQd3951aMEMjnVg6HjzInUoLsnmILH0sgX2EqhbF9Wa67TMQblEtMHTpnPSZMjJBDPYVMGJwg6FJweKAwLJmLTQoTlTnDlt1nTsTIkBA4xfKLneViyFcjXRnD1Z8Rt37oVVXQbILG1E2C6TRqA6nE2YY1c4OXWl2eqlRQq21oRDxkrpjvdjdcFF4YRWdYtjc9l2a1nm6rxWhG4H7J1HaREEFBXPCnlNK7ta6tVlC3IqlJekoSh1yuR2xZwzYl66Cs6GggSvcc6KQqhFUhj9KHwzQsmDhcRFUJkF97RioQKWVrgDVJUFU4xPfPiGGVGROMMx2PzcoXZtjyWzdkcFNUweygpJTayhkHgVvASJd0LVnBpRuCPc6hEa4M+dxvnz/nsOS0c7Q+3N3Lnfpgna3hv+td0v2weCnNT5j5n/AGit+a/9kb8NtfH/q9jpfi85rxON+/uf5v7hV3J/Q+PL2/9vpg+7716re07yPrd7hl9pc58ojYRnZRjG/KcFQwjjaBTiNPmmnGEnE7IwuiwC8kMCs0AQOdIibol/CxSlQH4OyFSgXuweB3yvyslKOHQQucaybJs6Y4otvKzkWCurJQS/6nlear9RDWUzax/AGR3P6G76UVFIkbJKanLEc6GERZSVMDPamdXUfMuoH8GA9buoRC+KR2EvzgD6LO32oNdnw6Evx7PAd8iB9W+8BP8r+GEFP3ZvHuDu9t6cCpDcvmH39tKEHNVwkNT2f3FxNkly0yS3nw6fdntGg9D/vtAd+s98Qdz9AWaGbHE9CwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6a626e520f505350c9f026e800d1b269"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">4a622e520f505350c9f026e800d1b296</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>42539489-e150-45e9-afd1-7b3f393c3c3e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:15:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>62626e520f505350c9f026e800d1b26a</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:27:16</sys_updated_on>
+        <ui_id>64b51c77-367d-4790-90b5-eee47dd49c1e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVy07jMBT9FSvrKkpaQNDdiMIIiceI1wZQ5Ng3rYVjB9tp6VT597l2krYCxIDEBpHdffrc45Pru1UkeDSOdoAn6UG6x0bpaDRMkuH+TprvjfJ0yEcUII0GkaIlYKYBpg1He05l7R2rla3zQupFbOCpBuuAZ8JB2TSYxIWtJF3edrnoYTMhuQEVje8eBlFFDbZ1YKLx6kXoo7gkzUFi6mUP7CVQt6y8zTWrS1AuE73ztKucdBFyMsEIFnk4aTKI4NmB4oBACiotDKKSKk6dNsto7EyNDgOUXyi5XGfMhHLtoCV9tuIvnryT+LwCcDLWkbA2s46g1l1MqKNX2Jm52qz50oKBbTnhUNBausNtX5twUTmhVVviaC77ai3rUp23jETrBlv3UVsEAZWf0yNvxyquZnpx2YM8FipQ0o0oNaNybVHnjMhr5+GsIpAQOC5pVQk1zSqj5yIUI5Qynko0Yi8WPNOKqYop87hjZJXGx+ifBPctNcIPcYZtsLgZRHZpDyW1djMKcpg91R5JO1g3QhZYCBRkQQm+mBlRuV941Bw64M2gU36++57C2MFGUFs9N+q3LEPZB8G/lvtl/0OQkzb+OfF/AFov/utw5W9D7fT/yne6XUvO20Cn/t0vU//+d1J/N8a3l///RJ8M312rW0oKOrdbgl9o85gpjQPf10ky4jeVVoTNgD3iwANChCVUemEsCSUllDkYogviZkA2L8XU6LoKWmyaGwvGkuCJyR8J1AIxMBewwCLshu198ZFyhhKLBBKnCdOqEKaM79UF3lBv4o9WtQ2QKuQxFCKHRldIqAPy259CFgIbK3KNwULgjdFHxHhGFZ2G2yOHWlktIX79Q/+s4T+3rT6gqX5bHQuQ3L4hsn5VQYmsO8ha0b1YV12Q3HbB9YP9ZTsr3UvC94021095t3sngm6ah3/DeDOfvwoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=62626e520f505350c9f026e800d1b26a"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">4a622e520f505350c9f026e800d1b296</flow>
+        <generation_source/>
+        <order>10</order>
+        <parent_ui_id>72d05569-40ee-40fa-afbb-fd0d8a6c27e0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:15:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>62626e520f505350c9f026e800d1b26b</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:27:16</sys_updated_on>
+        <ui_id>2e5370a7-a467-414f-a36f-63e450caeda7</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1WXU/bMBT9K5afuyptSlX6huiQkBhMMHihLHLim9aaYwfbKXRV//uunaStCmJF4gVtffP9sM85Pr7p/YoKTsd0ADzqHfeGWdyL434U9UeDXjqM016fxwygRztUsQKw0kCmDcf1gsnKB1YrW6W51E9dA48VWAc8EQ6K9RqLuLClZMu7phYj2VxIbkDR8f1Dh5bM4LYODB2v9lKH4pIsBYml1y2wfaBuWfo111lVgHKJaIMXTeekyZDzCWawycPpRR0Kzw4UBwSSM2mhQwumOHPaLOnYmQoDBhi/UnK5qZgL5WqiBXu24jeePIh8XQ7ILGtE2CyTRqA6nE+YYze4c+Yqs9FLiwxsrQmHnFXSne7G6oKr0gmt6hbHUtl2a1kV6rJWhG422LmPyiIIKD1Pj7ymld/M9dN1C/JMqCBJQ1HqjMnNijlnRFo5D2dFQULQuGBlKdQsKY1eiNCMUIruTOKi682CZ1oxU12WedxdVJV1zzA+CeE7ZoQn8Q23weZ1h9qlPZXM2i0V1DB5rDySmlhDIQkqBAmS4ATfnBlRuhM8agEN8HWncX569JbDsuOtoXb23LrfZgnaPhj+pd2v2wdBzuv8+8x/ALTW/D/Clb8OtfH/i9jFbi+5rBON+48+zP2jz+T+hsant//fTB/13xyrO04KPrc7hn/S5leiNBKeVlEU81sLhpA5s0Rpcvv9kpQGrB+mQhE3BxLy9WzukhPr6aEyxGlCbqqy1MaRGzALf6Mk14bklcE2g+0LfDpixrxABJ1HGOe+s/IbYvtX5QzDkU1mRlcl+UK2H6IQCVZfr3+ycGa4lhCvYa+m7WOd0vGU7kOZ0s60phzSeRSP+pAPhnnaj46iaAQQDfkQGMQAgxEP5XhH+G05sP6Vj+N/ZT9M2ffN2QNeQztnzwRIbl95Hu2QhQKZO0jq57I3aJskuWuSm78aHzZte8Mo/D7RzP1n/nE8/AEXUF/GbQsAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=62626e520f505350c9f026e800d1b26b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Add User to Entra ID Group">bc5311673b04171043fee5ac24e45a32</action_type>
+        <action_type_parent display_value="Add User to Entra ID Group">8fdfc56b3bc0171043fee5ac24e45a21</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>bc5311673b04171043fee5ac24e45a32</compiled_snapshot>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">4a622e520f505350c9f026e800d1b296</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>d9cb25e3-1440-4773-bd88-395b6aa6419a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:15:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>aa626e520f505350c9f026e800d1b268</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:27:16</sys_updated_on>
+        <ui_id>55aed042-6aaf-4b2b-a0af-64305890d5bb</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1TUU/bMBD+K8jPSZW4SVv6NlExIW0wjcELQtE5vrSWXCc4NtBV/e87N0lBgBBIe5r2eN995/vu893NlinJ5kzOZnyajKuxKJPjaZpk4woxh5JnmOXABYuYgTUSc2lr3xRUFLF70D5A223rRaXrh9GQ3O0oLVXbaNhcv88qV0pLi4bNb24j1oClNg4tm29fpD6qU4NATdSvocvR2eJN6W7TBKR1VpllH3/rCy8HsLYyCEkjho8OjURSUIFuMWJrMBJcbTds7qwnwCLIC6M3B8ZKGUePscB9bNVvajdLkiQwK6ShSuyyh7Do/ergagEOSIkvnbc9tVzVqsS2s0NiBV67k+dYR7honKpNV+JA6KG61n5tzjsr2OGB4XsI8S2JwCZMGrT3g1SXq/rh56DyVJm9KX1S1yXoQwSOrBPeBT1b5tWvFy53yCufUeOaOhZraBpCisbW92rfhUSvR0tNwShsDqlr1dKMoAwTjugHYHRK+GIPX4NVYdzv9AwVh3ZXRt15PAubMzkOW5LzeDKd8jirKhGLPJnEVTbhWB5jkkDGdhFrN+2JhrZ9Mop+qLjzYczOtt6govM4lJRWNe4LibrH3otd1B+WKPNxmk6mY5Fk6auFnWRP20nu28I35s3DIvz9mxoInzunD6gbzumK5B1d/Th/U/Bnzon/P6d/4Jz4OAWeI495inmcZRWPIU9kLLgUM8m5TMXfPKfbPwMPmNypBgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=aa626e520f505350c9f026e800d1b268"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">4a622e520f505350c9f026e800d1b296</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>6ffcadc7-ce76-4294-ad74-c09c6990bde6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:15:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6a626e520f505350c9f026e800d1b26a</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:27:16</sys_updated_on>
+        <ui_id>5ddc9979-03ec-43ce-aba0-d0d922e2d1ff</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1WXU/bMBT9K5afS+SkaVf6NtEhITGYYOKFsshJblprThz8Ueiq/vfdOEmpADGQ0CS09Sm+H845x8c3vd5QkdMpjSFn4WE4zobhcBgxFk3iMB0P0zDKhxwgpANa8RKwUkOmdI7rFZeuCWw2xqWFVHeBhlsHxkKeCAvldotFuTC15OurrhYj2VLIXENFp9c3A1pzjdta0HS6eZR6LS7JU5BYetEDewzUrutmnavMlVDZRPTB065z1mXIyQwz2NTACdmAwr2FKgcEUnBpYEBLXuXcKr2mU6sdBjTw/LyS613FUlS2JVryeyN+4Ztj1tQVgMyyToTdMukEasPFjFt+iTtn1umdXkpkYFpNcii4k/ZoP9YWnNdWqKptsTyVfbeSrqzOWkXoboO983AGQUDd8GyQt7SKy6W6u+hBHovKS9JRlCrjcrfi1mqROtvA2VCQ4DUueV2LapHUWq2Eb0YoZbCQuAgas+A7jVhUAc8a3AGqyoNjjM98+Ipr0ZD4ittg83ZAzdocSW7MAxXUMLl1DZKWWEch8Sp4CRLvhKY506K2n/FVK+iAbwed89PRSw7LDh8Mtbfng/tNlqDtveGf2v2ivxDkpM2/zfyvgNab/7s/8uehdv5/Ejvd7yVnbaJz/+jd3D/5SO7vaHx4+//J9Cx6cazuOcn73OwZ/k7pn0mlkPDcMTbMj5xGlaxcE7hHsAIVQ+aEVwS9AAvNG4IEtFaa4INymiDSgHyTwA0QtFC2xKglVhG7BHIJeoUneqbuiAVeNmFRrfAWiQW34EuEMQ5I4TQudDCvvvjNp2SzGY04fjDi6GDMeXEQp1F6wBk+jeMhG00OWT5K08BjSUowhi9gu/2BsqLm/twWWrm65bWZ97d5TqdzugerezRzOpi3sviKiE0idhhlcVHA5FPMxmEWh0U6KsKQZZ/Y0JfjOeL355X1z3xA/6v/V9V/27x+xa3q5/WxAJmbZ65ZP6yhRPIWkvbaPRrYXZJcdcndX5Z3m9rhmPnfB5rd/8w/l5vf3RxItLULAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6a626e520f505350c9f026e800d1b26a"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=4a622e520f505350c9f026e800d1b296"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=4a622e520f505350c9f026e800d1b296^sys_idNOT IN6e626e520f505350c9f026e800d1b258,62626e520f505350c9f026e800d1b25b,62626e520f505350c9f026e800d1b251,a2626e520f505350c9f026e800d1b256,ae626e520f505350c9f026e800d1b253"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">fd9d96883bd85b1043fee5ac24e45a7d</block>
+        <comment/>
+        <connected_to>0625720b-4815-4795-9a89-51377da3b72d</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">4a622e520f505350c9f026e800d1b296</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id>d9cb25e3-1440-4773-bd88-395b6aa6419a</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:15:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6e626e520f505350c9f026e800d1b258</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:26:15</sys_updated_on>
+        <ui_id>6ffcadc7-ce76-4294-ad74-c09c6990bde6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">ca9d96883bd85b1043fee5ac24e45a81</block>
+        <comment/>
+        <connected_to>d9cb25e3-1440-4773-bd88-395b6aa6419a</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">4a622e520f505350c9f026e800d1b296</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:15:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>62626e520f505350c9f026e800d1b25b</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:26:15</sys_updated_on>
+        <ui_id>72d05569-40ee-40fa-afbb-fd0d8a6c27e0</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f59d96883bd85b1043fee5ac24e45a63</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">4a622e520f505350c9f026e800d1b296</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:15:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>62626e520f505350c9f026e800d1b251</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:26:15</sys_updated_on>
+        <ui_id>d9cb25e3-1440-4773-bd88-395b6aa6419a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2UXWvbMBSG/8rwtTH+qMOau9K1UFibsYTCGMUcS3IiJkuaJCfNjP/7jvyRhDXtxtjl7qxXOue8581D2kA1TjfOrtSVtXwtg/nXpzDg0mv43QYSahbMA6Ik5Y4rWfRCGGxBNP4CPym3WsD+8aiQDRfUsLGbBoM1jplg3v5y5faaFQJKJrBw6QyXayznFE9VDFVySRKSpbMsjeP0/UVSzrIySWkGDDJ8NxVeT+befeyV8FXXfh7qdpqkDPW2kjgM2LNjkjIcXYGwLAxqkBScMvuDYhjQhRRHYcOlGzau4dnyH9g7zXP/sGK4IxnjOByLMaopJcUJW2hvcFAclGKKUImmlg/DHj5kVkEj3EnIjcV+THvT3sVoqVpu1O7zNPCWy37B8VIoAuJwAocxlI1j1v8wTLAaGxU1aI3hFNqoLe+L0UsdrQUeokqoHQ71pERAvPEIM4LoFvUPvfwIhvst7rENFg82S7CcFD1V2M4ZXKHrYym+N97QsOC4SjGkgQ8sMVy7K5yzZaPrLnyJ5AmNbWub0puMGi277m75sFjd3H9afXmJ6VtP/wW/l5BXeRLn5/m9mJ3j9wy5r0Ob/gZaH/MfMhvH8X9oT6HlthjgG3frh/81s08e0GGCHbihjHCLRlZeu5v+bf3FHgHg5FTaKfPNr3DUup/+8JRRtwUAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">319d96883bd85b1043fee5ac24e45a7a</block>
+        <comment/>
+        <connected_to>0625720b-4815-4795-9a89-51377da3b72d</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">4a622e520f505350c9f026e800d1b296</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>d9cb25e3-1440-4773-bd88-395b6aa6419a</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:15:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a2626e520f505350c9f026e800d1b256</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:26:15</sys_updated_on>
+        <ui_id>42539489-e150-45e9-afd1-7b3f393c3c3e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UTYvbMBD9K8Vnx8h2HHZzW1oWCm0Xuste2sWMpXEiKkuuJCebhvz3jvyRhP2gpYWeerOeNDPvPT15H5nOt513d+bKObnS0fLLQxxJHTD63kcaGoyWETdaSC+NLnsgjjagurBBn0K6VsHu/oTwtVTC4titBUs1Hm203D/Z8rsWSwUVKiq89VbqFZVLQauaQZ1e8pTn2SLPGMsu5mm1yKs0EzkgZHRuKnw7kXvzoUfiV1mHeYS7aZKxItBKWRzho0ctkEbXoBzGUQNagDd2d0QsgrjR6gSspfaD4gYenfxBvbOiCAdrJI18tOO4LEerJpeM5HjTBoID4qFSk4VGdY3+NOgIJmMNnfJnJneO+mEbSAcWI6X6dm22n6eB11L3AsdNZTio4wo82VB1Hl24GFTYUKOygbYlc8rWmo3si4lLk6wULZJamS0NDUlJgAfiCXkEyTXh73r4HqwMKj5SGyoeaFbgJC/7VFE7b0nCobel/N4FQoPAUUo5uEEHHLey9Vc0Z4Mj60P8PJJnadzviwJQsHk2WwDUs3mVVTOgJM0W85wVF5dMFFWVOA++cyU3Ag+Hrx1juZgz9jzKf9vuH7yD9KV38MILeD382S/CH67rN7PPGPsf/vPwS1cOIR619cP/OPsPIejDBDfkRiCXjojcBez99NcOGzsKgOTn0NbYb0HCCTv8BJ9dy0L/BQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">359d96883bd85b1043fee5ac24e45a75</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">4a622e520f505350c9f026e800d1b296</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id>d9cb25e3-1440-4773-bd88-395b6aa6419a</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:15:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ae626e520f505350c9f026e800d1b253</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:26:15</sys_updated_on>
+        <ui_id>0625720b-4815-4795-9a89-51377da3b72d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UXW/TMBT9KyjPaeR8au3bBJqEBExi015gim5sp7Vw7GA77UrU/851Ptpq6wQCHnmLj33vPef4OH2gO9d2zt7ra2vFWgWrL49hIJTH8LsPFDQ8WAVUKyac0KocgDDYguz8Bn4yYVsJ+4cTQjdCMsOnbi0YrHHcBKv+2Zbbt7yUUHGJhXfOCLXGcsFwVROo4yWNaZoUaUJIcpXFVZFWccJS4JDiubnw7UzuzYcBCV9l7echbudJ2jBPKyZhwJ8cV4zj6Bqk5WHQgGLgtNkfEcOB3Sp5AjZCuVFxA09W/MDeSZ77gzVHjXSy47gsJ6tml7Sg/Lb1BEfEQSVnC7XsGvVp1OFN5jV00p2Z3Fnsx1tP2rOYKNV3G737PA+8EWoQOG1KTUEeV+DQhqpz3PqL4ZI32KhsoG3RnLI1eiuGYuTSRGuJi6iWeodDfVIioJ54hB5BdIP4uwF+ACO8io/YBotHmhVYQcshVdjOGZRwGGwpv3ee0ChwklKObuABS41o3TXO2fKJ9SF8GcmzNPZ9ngNnJEsWBUC9yKqkWgAmaVFkKcmvloTlVRVZB66zJdWMHw5fO0JSlpDsZZT/tt2/eAdLyOs8Jvnld5AVl97BhRfweviTX4TfX9dvZp8Q8j/85+EXthxDPGkbhv9x9h990McJdswN41RYJHLvsffzX9tv7DEAgp5DO22+eQkn7PATsJmkL/8FAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=4a622e520f505350c9f026e800d1b296"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=4a622e520f505350c9f026e800d1b296"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_4a622e520f505350c9f026e800d1b296"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>group_name</element>
+        <help/>
+        <hint/>
+        <label>Group Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4a622e520f505350c9f026e800d1b296</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 10:35:03</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>08309b163b58139043fee5ac24e45a65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="FileMaker Application" source="x_sogs_filemaker_a">19337c990f40d714c9f026e800d1b26f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 10:35:03</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>group_id</element>
+        <help/>
+        <hint/>
+        <label>Group ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4a622e520f505350c9f026e800d1b296</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:15:45</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>249226d20f505350c9f026e800d1b25a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="FileMaker Application" source="x_sogs_filemaker_a">19337c990f40d714c9f026e800d1b26f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 07:15:45</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>requested_item</element>
+        <help/>
+        <hint/>
+        <label>Requested Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4a622e520f505350c9f026e800d1b296</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:15:03</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>52622e520f505350c9f026e800d1b2cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="FileMaker Application" source="x_sogs_filemaker_a">19337c990f40d714c9f026e800d1b26f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 07:15:03</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>upn</element>
+        <help/>
+        <hint/>
+        <label>UPN</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_4a622e520f505350c9f026e800d1b296</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 14:08:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>cc110cee3b50539043fee5ac24e45a89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="FileMaker Application" source="x_sogs_filemaker_a">19337c990f40d714c9f026e800d1b26f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:08:36</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_4a622e520f505350c9f026e800d1b296"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_4a622e520f505350c9f026e800d1b296"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=2372000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>29000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>3e841ec43b985b1043fee5ac24e45abe</copied_from>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>ritm__filemaker_add_user_to_entra_id_group</internal_name>
+        <label_cache>[{"name":"subflow.group_name","label":"Input➛Group Name","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"28151e67-fc14-491c-8303-3bd1855d12f5":["work_notes"],"64b51c77-367d-4790-90b5-eee47dd49c1e":["work_notes"],"2e5370a7-a467-414f-a36f-63e450caeda7":["work_notes"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"d41a29e1-c70e-4906-ac06-b1471b601e32","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"55aed042-6aaf-4b2b-a0af-64305890d5bb.error_message","label":"2 - Add User to Entra ID Group➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","usedInstances":{"5ddc9979-03ec-43ce-aba0-d0d922e2d1ff":["work_notes"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"65321ddb-2f3d-46d8-8494-3b8bee3daab8"}},{"name":"subflow.requested_user.name","label":"Input➛Requested User➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"name","usedInstances":{"28151e67-fc14-491c-8303-3bd1855d12f5":["work_notes"],"64b51c77-367d-4790-90b5-eee47dd49c1e":["work_notes"],"2e5370a7-a467-414f-a36f-63e450caeda7":["work_notes"]}},{"name":"subflow.requested_item","label":"Input➛Requested Item","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","column_name":"","usedInstances":{"28151e67-fc14-491c-8303-3bd1855d12f5":["record"],"64b51c77-367d-4790-90b5-eee47dd49c1e":["record"],"5ddc9979-03ec-43ce-aba0-d0d922e2d1ff":["record"],"2e5370a7-a467-414f-a36f-63e450caeda7":["record"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7cb46e48-8d54-4eec-ad10-0b65ec077ee0","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"55aed042-6aaf-4b2b-a0af-64305890d5bb.status_code","label":"2 - Add User to Entra ID Group➛Status Code","reference_display":"Status Code","type":"string","base_type":"string","usedInstances":{"0625720b-4815-4795-9a89-51377da3b72d":["condition"],"42539489-e150-45e9-afd1-7b3f393c3c3e":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"b2343d83-76a3-41b3-a912-7edb8138d3dd"}},{"name":"subflow.requested_user.u_upn","label":"Input➛Requested User➛UPN","reference":"","reference_display":"UPN","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"u_upn","usedInstances":{"55aed042-6aaf-4b2b-a0af-64305890d5bb":["user_upn"]}},{"name":"subflow.requested_user","label":"Input➛Requested User","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","usedInstances":{"28151e67-fc14-491c-8303-3bd1855d12f5":["work_notes"]},"attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"28aa5c01-086b-44ef-96d1-a9d010cc303b","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.group_id","label":"Input➛Group ID","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"55aed042-6aaf-4b2b-a0af-64305890d5bb":["group_id"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"3610fb19-cd29-4675-a0a9-7d0994ac0697","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.upn","label":"Input➛UPN","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"55aed042-6aaf-4b2b-a0af-64305890d5bb":["user_upn"],"d9cb25e3-1440-4773-bd88-395b6aa6419a":["condition"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"21e6284a-68a3-487a-a347-242b4892c0c1","sourceUiUniqueId":"","sourceType":"","sourceId":""}}]</label_cache>
+        <master>true</master>
+        <name>RITM - Filemaker (Add user to Entra ID group)</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="RITM - Filemaker (Add user to Entra ID group)">4a622e520f505350c9f026e800d1b296</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:16:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>07a2aed20f505350c9f026e800d1b243</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:26:19</sys_updated_on>
+        <type>subflow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_variable_value action="delete_multiple" query="document_key=07a2aed20f505350c9f026e800d1b243"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=07a2aed20f505350c9f026e800d1b243"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=07a2aed20f505350c9f026e800d1b243^sys_idNOT IN4fa2aed20f505350c9f026e800d1b245"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>07a2aed20f505350c9f026e800d1b243</id>
+        <name>RITM - Filemaker (Add user to Entra ID group)</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:16:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4fa2aed20f505350c9f026e800d1b245</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 07:16:11</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=4fa2aed20f505350c9f026e800d1b245"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=07a2aed20f505350c9f026e800d1b243^sys_idNOT IN3b9053963b58139043fee5ac24e45a29,43a2aed20f505350c9f026e800d1b299,7b2140223b90539043fee5ac24e45ac2,87a2aed20f505350c9f026e800d1b247"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=d41a29e1-c70e-4906-ac06-b1471b601e32</attributes>
+        <audit>false</audit>
+        <calculation>(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);</calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>group_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Group Name</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="RITM - Filemaker (Add user to Entra ID group)">07a2aed20f505350c9f026e800d1b243</model>
+        <model_id>07a2aed20f505350c9f026e800d1b243</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_07a2aed20f505350c9f026e800d1b243</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 10:36:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3b9053963b58139043fee5ac24e45a29</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:09:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3b9053963b58139043fee5ac24e45a29"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=7cb46e48-8d54-4eec-ad10-0b65ec077ee0</attributes>
+        <audit>false</audit>
+        <calculation>(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);</calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sc_req_item</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>requested_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Requested Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="RITM - Filemaker (Add user to Entra ID group)">07a2aed20f505350c9f026e800d1b243</model>
+        <model_id>07a2aed20f505350c9f026e800d1b243</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_07a2aed20f505350c9f026e800d1b243</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:16:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>43a2aed20f505350c9f026e800d1b299</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:09:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=43a2aed20f505350c9f026e800d1b299"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=21e6284a-68a3-487a-a347-242b4892c0c1</attributes>
+        <audit>false</audit>
+        <calculation>(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);</calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>upn</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>UPN</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="RITM - Filemaker (Add user to Entra ID group)">07a2aed20f505350c9f026e800d1b243</model>
+        <model_id>07a2aed20f505350c9f026e800d1b243</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_07a2aed20f505350c9f026e800d1b243</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 14:09:08</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7b2140223b90539043fee5ac24e45ac2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:09:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7b2140223b90539043fee5ac24e45ac2"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=3610fb19-cd29-4675-a0a9-7d0994ac0697</attributes>
+        <audit>false</audit>
+        <calculation>(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);</calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>group_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Group ID</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="RITM - Filemaker (Add user to Entra ID group)">07a2aed20f505350c9f026e800d1b243</model>
+        <model_id>07a2aed20f505350c9f026e800d1b243</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_07a2aed20f505350c9f026e800d1b243</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:16:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>87a2aed20f505350c9f026e800d1b247</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:09:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=87a2aed20f505350c9f026e800d1b247"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=07a2aed20f505350c9f026e800d1b243"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=07a2aed20f505350c9f026e800d1b243"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=07a2aed20f505350c9f026e800d1b243"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=07a2aed20f505350c9f026e800d1b243^sys_idNOT IN97a2aed20f505350c9f026e800d1b2fc,57a2aed20f505350c9f026e800d1b2fd,5fa2aed20f505350c9f026e800d1b2fd,57a2aed20f505350c9f026e800d1b2fe,5fa2aed20f505350c9f026e800d1b2fe"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Add User to Entra ID Group">bc5311673b04171043fee5ac24e45a32</action_type>
+        <action_type_parent display_value="Add User to Entra ID Group">8fdfc56b3bc0171043fee5ac24e45a21</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>bc5311673b04171043fee5ac24e45a32</compiled_snapshot>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">07a2aed20f505350c9f026e800d1b243</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id>d9cb25e3-1440-4773-bd88-395b6aa6419a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:16:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>97a2aed20f505350c9f026e800d1b2fc</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:26:19</sys_updated_on>
+        <ui_id>55aed042-6aaf-4b2b-a0af-64305890d5bb</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1TUU/bMBD+K8jPSZW4SVv6NlExIW0wjcELQtE5vrSWXCc4NtBV/e87N0lBgBBIe5r2eN995/vu893NlinJ5kzOZnyajKuxKJPjaZpk4woxh5JnmOXABYuYgTUSc2lr3xRUFLF70D5A223rRaXrh9GQ3O0oLVXbaNhcv88qV0pLi4bNb24j1oClNg4tm29fpD6qU4NATdSvocvR2eJN6W7TBKR1VpllH3/rCy8HsLYyCEkjho8OjURSUIFuMWJrMBJcbTds7qwnwCLIC6M3B8ZKGUePscB9bNVvajdLkiQwK6ShSuyyh7Do/ergagEOSIkvnbc9tVzVqsS2s0NiBV67k+dYR7honKpNV+JA6KG61n5tzjsr2OGB4XsI8S2JwCZMGrT3g1SXq/rh56DyVJm9KX1S1yXoQwSOrBPeBT1b5tWvFy53yCufUeOaOhZraBpCisbW92rfhUSvR0tNwShsDqlr1dKMoAwTjugHYHRK+GIPX4NVYdzv9AwVh3ZXRt15PAubMzkOW5LzeDKd8jirKhGLPJnEVTbhWB5jkkDGdhFrN+2JhrZ9Mop+qLjzYczOtt6govM4lJRWNe4LibrH3otd1B+WKPNxmk6mY5Fk6auFnWRP20nu28I35s3DIvz9mxoInzunD6gbzumK5B1d/Th/U/Bnzon/P6d/4Jz4OAWeI495inmcZRWPIU9kLLgUM8m5TMXfPKfbPwMPmNypBgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=97a2aed20f505350c9f026e800d1b2fc"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">07a2aed20f505350c9f026e800d1b243</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>0625720b-4815-4795-9a89-51377da3b72d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:16:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>57a2aed20f505350c9f026e800d1b2fd</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:09:10</sys_updated_on>
+        <ui_id>28151e67-fc14-491c-8303-3bd1855d12f5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1WXW/aMBT9K5afUZQQQMBbVcZUqR9T2/WldJGJb8CqY6e2U8pQ//tunARQW3VU6ku18YTvl885PnFyu6GC0zHtAQ+jUTRI4yiOu2HYHfai+SCeR10eM4CIdqhiOWClgVQbjutHJssqsNnYcp5JvQoMPJRgHfBEOMifn7GIC1tItr5pajGSLoXkBhQd3951aMEMjnVg6HjzInUoLsnmILH0sgX2EqhbF9Wa67TMQblEtMHTpnPSZMjJBDPYVMGJwg6FJweKAwLJmLTQoTlTnDlt1nTsTIkBA4xfKLneViyFcjXRnD1Z8Rt37oVVXQbILG1E2C6TRqA6nE2YY1c4OXWl2eqlRQq21oRDxkrpjvdjdcFF4YRWdYtjc9l2a1nm6rxWhG4H7J1HaREEFBXPCnlNK7ta6tVlC3IqlJekoSh1yuR2xZwzYl66Cs6GggSvcc6KQqhFUhj9KHwzQsmDhcRFUJkF97RioQKWVrgDVJUFU4xPfPiGGVGROMMx2PzcoXZtjyWzdkcFNUweygpJTayhkHgVvASJd0LVnBpRuCPc6hEa4M+dxvnz/nsOS0c7Q+3N3Lnfpgna3hv+td0v2weCnNT5j5n/AGit+a/9kb8NtfH/q9jpfi85rxON+/uf5v7hV3J/Q+PL2/9vpg+7716re07yPrd7hl9pc58ojYRnZRjG/KcFQwjjaBTiNPmmnGEnE7IwuiwC8kMCs0AQOdIibol/CxSlQH4OyFSgXuweB3yvyslKOHQQucaybJs6Y4otvKzkWCurJQS/6nlear9RDWUzax/AGR3P6G76UVFIkbJKanLEc6GERZSVMDPamdXUfMuoH8GA9buoRC+KR2EvzgD6LO32oNdnw6Evx7PAd8iB9W+8BP8r+GEFP3ZvHuDu9t6cCpDcvmH39tKEHNVwkNT2f3FxNkly0yS3nw6fdntGg9D/vtAd+s98Qdz9AWaGbHE9CwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=57a2aed20f505350c9f026e800d1b2fd"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">07a2aed20f505350c9f026e800d1b243</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>42539489-e150-45e9-afd1-7b3f393c3c3e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:16:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5fa2aed20f505350c9f026e800d1b2fd</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:09:10</sys_updated_on>
+        <ui_id>64b51c77-367d-4790-90b5-eee47dd49c1e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVy07jMBT9FSvrKkpaQNDdiMIIiceI1wZQ5Ng3rYVjB9tp6VT597l2krYCxIDEBpHdffrc45Pru1UkeDSOdoAn6UG6x0bpaDRMkuH+TprvjfJ0yEcUII0GkaIlYKYBpg1He05l7R2rla3zQupFbOCpBuuAZ8JB2TSYxIWtJF3edrnoYTMhuQEVje8eBlFFDbZ1YKLx6kXoo7gkzUFi6mUP7CVQt6y8zTWrS1AuE73ztKucdBFyMsEIFnk4aTKI4NmB4oBACiotDKKSKk6dNsto7EyNDgOUXyi5XGfMhHLtoCV9tuIvnryT+LwCcDLWkbA2s46g1l1MqKNX2Jm52qz50oKBbTnhUNBausNtX5twUTmhVVviaC77ai3rUp23jETrBlv3UVsEAZWf0yNvxyquZnpx2YM8FipQ0o0oNaNybVHnjMhr5+GsIpAQOC5pVQk1zSqj5yIUI5Qynko0Yi8WPNOKqYop87hjZJXGx+ifBPctNcIPcYZtsLgZRHZpDyW1djMKcpg91R5JO1g3QhZYCBRkQQm+mBlRuV941Bw64M2gU36++57C2MFGUFs9N+q3LEPZB8G/lvtl/0OQkzb+OfF/AFov/utw5W9D7fT/yne6XUvO20Cn/t0vU//+d1J/N8a3l///RJ8M312rW0oKOrdbgl9o85gpjQPf10ky4jeVVoTNgD3iwANChCVUemEsCSUllDkYogviZkA2L8XU6LoKWmyaGwvGkuCJyR8J1AIxMBewwCLshu198ZFyhhKLBBKnCdOqEKaM79UF3lBv4o9WtQ2QKuQxFCKHRldIqAPy259CFgIbK3KNwULgjdFHxHhGFZ2G2yOHWlktIX79Q/+s4T+3rT6gqX5bHQuQ3L4hsn5VQYmsO8ha0b1YV12Q3HbB9YP9ZTsr3UvC94021095t3sngm6ah3/DeDOfvwoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5fa2aed20f505350c9f026e800d1b2fd"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">07a2aed20f505350c9f026e800d1b243</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>6ffcadc7-ce76-4294-ad74-c09c6990bde6</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:16:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>57a2aed20f505350c9f026e800d1b2fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 07:16:13</sys_updated_on>
+        <ui_id>5ddc9979-03ec-43ce-aba0-d0d922e2d1ff</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1WXU/bMBT9K5afS+SkaVf6NtEhITGYYOKFsshJblprThz8Ueiq/vfdOEmpADGQ0CS09Sm+H845x8c3vd5QkdMpjSFn4WE4zobhcBgxFk3iMB0P0zDKhxwgpANa8RKwUkOmdI7rFZeuCWw2xqWFVHeBhlsHxkKeCAvldotFuTC15OurrhYj2VLIXENFp9c3A1pzjdta0HS6eZR6LS7JU5BYetEDewzUrutmnavMlVDZRPTB065z1mXIyQwz2NTACdmAwr2FKgcEUnBpYEBLXuXcKr2mU6sdBjTw/LyS613FUlS2JVryeyN+4Ztj1tQVgMyyToTdMukEasPFjFt+iTtn1umdXkpkYFpNcii4k/ZoP9YWnNdWqKptsTyVfbeSrqzOWkXoboO983AGQUDd8GyQt7SKy6W6u+hBHovKS9JRlCrjcrfi1mqROtvA2VCQ4DUueV2LapHUWq2Eb0YoZbCQuAgas+A7jVhUAc8a3AGqyoNjjM98+Ipr0ZD4ittg83ZAzdocSW7MAxXUMLl1DZKWWEch8Sp4CRLvhKY506K2n/FVK+iAbwed89PRSw7LDh8Mtbfng/tNlqDtveGf2v2ivxDkpM2/zfyvgNab/7s/8uehdv5/Ejvd7yVnbaJz/+jd3D/5SO7vaHx4+//J9Cx6cazuOcn73OwZ/k7pn0mlkPDcMTbMj5xGlaxcE7hHsAIVQ+aEVwS9AAvNG4IEtFaa4INymiDSgHyTwA0QtFC2xKglVhG7BHIJeoUneqbuiAVeNmFRrfAWiQW34EuEMQ5I4TQudDCvvvjNp2SzGY04fjDi6GDMeXEQp1F6wBk+jeMhG00OWT5K08BjSUowhi9gu/2BsqLm/twWWrm65bWZ97d5TqdzugerezRzOpi3sviKiE0idhhlcVHA5FPMxmEWh0U6KsKQZZ/Y0JfjOeL355X1z3xA/6v/V9V/27x+xa3q5/WxAJmbZ65ZP6yhRPIWkvbaPRrYXZJcdcndX5Z3m9rhmPnfB5rd/8w/l5vf3RxItLULAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=57a2aed20f505350c9f026e800d1b2fe"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">07a2aed20f505350c9f026e800d1b243</flow>
+        <generation_source/>
+        <order>10</order>
+        <parent_ui_id>72d05569-40ee-40fa-afbb-fd0d8a6c27e0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:16:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5fa2aed20f505350c9f026e800d1b2fe</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:09:10</sys_updated_on>
+        <ui_id>2e5370a7-a467-414f-a36f-63e450caeda7</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1WXU/bMBT9K5afuyptSlX6huiQkBhMMHihLHLim9aaYwfbKXRV//uunaStCmJF4gVtffP9sM85Pr7p/YoKTsd0ADzqHfeGWdyL434U9UeDXjqM016fxwygRztUsQKw0kCmDcf1gsnKB1YrW6W51E9dA48VWAc8EQ6K9RqLuLClZMu7phYj2VxIbkDR8f1Dh5bM4LYODB2v9lKH4pIsBYml1y2wfaBuWfo111lVgHKJaIMXTeekyZDzCWawycPpRR0Kzw4UBwSSM2mhQwumOHPaLOnYmQoDBhi/UnK5qZgL5WqiBXu24jeePIh8XQ7ILGtE2CyTRqA6nE+YYze4c+Yqs9FLiwxsrQmHnFXSne7G6oKr0gmt6hbHUtl2a1kV6rJWhG422LmPyiIIKD1Pj7ymld/M9dN1C/JMqCBJQ1HqjMnNijlnRFo5D2dFQULQuGBlKdQsKY1eiNCMUIruTOKi682CZ1oxU12WedxdVJV1zzA+CeE7ZoQn8Q23weZ1h9qlPZXM2i0V1DB5rDySmlhDIQkqBAmS4ATfnBlRuhM8agEN8HWncX569JbDsuOtoXb23LrfZgnaPhj+pd2v2wdBzuv8+8x/ALTW/D/Clb8OtfH/i9jFbi+5rBON+48+zP2jz+T+hsant//fTB/13xyrO04KPrc7hn/S5leiNBKeVlEU81sLhpA5s0Rpcvv9kpQGrB+mQhE3BxLy9WzukhPr6aEyxGlCbqqy1MaRGzALf6Mk14bklcE2g+0LfDpixrxABJ1HGOe+s/IbYvtX5QzDkU1mRlcl+UK2H6IQCVZfr3+ycGa4lhCvYa+m7WOd0vGU7kOZ0s60phzSeRSP+pAPhnnaj46iaAQQDfkQGMQAgxEP5XhH+G05sP6Vj+N/ZT9M2ffN2QNeQztnzwRIbl95Hu2QhQKZO0jq57I3aJskuWuSm78aHzZte8Mo/D7RzP1n/nE8/AEXUF/GbQsAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5fa2aed20f505350c9f026e800d1b2fe"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=07a2aed20f505350c9f026e800d1b243"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=07a2aed20f505350c9f026e800d1b243^sys_idNOT IN5fa2aed20f505350c9f026e800d1b2e4,9ba2aed20f505350c9f026e800d1b2e7,9fa2aed20f505350c9f026e800d1b2e9,5ba2aed20f505350c9f026e800d1b2ec,17a2aed20f505350c9f026e800d1b2fb"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f59d96883bd85b1043fee5ac24e45a63</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">07a2aed20f505350c9f026e800d1b243</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:16:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5fa2aed20f505350c9f026e800d1b2e4</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:26:19</sys_updated_on>
+        <ui_id>d9cb25e3-1440-4773-bd88-395b6aa6419a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UXWvbMBT9K0PPxthOE9a8lXSFQtuMJRTGKOZalhMxWfL0kTQz+e+7shwntNlH2R73Jh3p3nvO8ZFbopxtnDVLdWUMX0ky/fIUES49huuWSKgZmRKqZMktVzLvgIhsQDh/gMuSm0bA7vGI0DUXpWZ9twY01limybR9ccRLLKgSqNJLmtJRNhllSZK9v0iLyahIs3IEDEbYUEDBBF6dHWi8u+uQ6Kf87K7xuLGay1W/v+u7LA6g0qVnlSYRYc+WyZIhnwqEYRGpQZZgld4NiGZQzqU4AmsubRBcw7Ph33FgNh77ixVDibR3Y9jmvVMBrq7BAlJx1Do9GKc4ZSaYU7IKnLCzUyxcmDdeaiixUIhDtRKulg/BETI0OPkwziAJ1nilnnqvo1qs1fbTgeUNl50r/aFQFMSwA4veFc56Pi1hgtXYKK+hadDRvNFqw7ti5FLHK4GbuBJqi0N9umKgnniMxkJ8g/h1Bz+C5l7FPbbB4kCzAMNp3iUR26FNjOwjYnZmJsCYo0h0N//mPMUguReXB398CdW8sVc4ecN6HfvodbBPMt22xhWeduwaud/fLh7myw/3H5efX4f9V1ff9gouYVyN02R8/hVcTM69gjP5f2P0s99E3/v+h8lPkuR/9P86+tzkIbC9tm74P0z+k495mDl4TblBakuP3R7+/P5gh+Hi9BTaKv3Vizpi+x8YFDipQwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">359d96883bd85b1043fee5ac24e45a75</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">07a2aed20f505350c9f026e800d1b243</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id>d9cb25e3-1440-4773-bd88-395b6aa6419a</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:16:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9ba2aed20f505350c9f026e800d1b2e7</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:26:19</sys_updated_on>
+        <ui_id>0625720b-4815-4795-9a89-51377da3b72d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0PPjpG/QtO3klIYdCuspS9bMdeSnIjJlmdJSTOT/74r23FCm7GV7nFv1pHu1TlH9+COaGcbZ82DvjJGrmpy+fUpILL2GH53pIZKkEvCdM2llbrOeyAgG1DOb+Anl6ZRsHs8ImwtFW/F2K2BFmusaMll92JLciwoKZTRgkUsiedJTGl8kUbFPCmimCcgIMGGCgqh8OjyQOPDbY8Ev+Vnd43HjW1lvRrXt2OX+wOoW+5ZRTQg4tmKmgvkU4IyIiAV1BysbncT0grgd7U6AmtZ20FwBc9G/sQL4yzzB0uBEtnoxrTMR6cGuLwGC0jFMevayTgtmTCDOVyU4JRdnmLDgbvGSx1KLBTqUK2Vq+rPgyNkanDyMM4gCdF4pZ76qKO8X+vtlwPLG1n3roybSjNQ0woselc46/l0RChRYaO8gqZBR/Om1RvZFyOXKlwpXISl0lu81E9XCMwTD9FYCG8Qv+7hR2ilV/EJ22DxQLMAI1neTyK2Q5sE2QfE7MxSgTFHkehu/sN5ioPkUVw++ONLWCsbe4U3b8SoYx+8HuyTme66LAPBaRrP5gDlLC3iYgY4pbN5mtDsYkF5VhShsWCdyZnmYr//5ihNeEzT14F4b7u3pWkBWZlFNDufpnR+Lk1ncvTGCMV/iJB/v79MEKX0f4TeHSFp8mHwR2395f8wQU8+LsOdk9dMGqT24LGPhz+I39jhcEl2Cm11+92LOmL7XzdZPFOLBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">319d96883bd85b1043fee5ac24e45a7a</block>
+        <comment/>
+        <connected_to>0625720b-4815-4795-9a89-51377da3b72d</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">07a2aed20f505350c9f026e800d1b243</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>d9cb25e3-1440-4773-bd88-395b6aa6419a</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:16:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9fa2aed20f505350c9f026e800d1b2e9</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:26:19</sys_updated_on>
+        <ui_id>42539489-e150-45e9-afd1-7b3f393c3c3e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0PPjpHtOLR9KymFQbfCWvqyFXMtyYmYbHn6SJqZ/Pdd2Y4T2o5ttI97s450r845ugd3RHvXemfv9aW1ctWQi6+PEZFNwPC7Iw3UglwQphsundRN0QMR2YDyYQM/ubStgt3DEWFrqbgRY7cWDNY4YchF92xLciyoKFTJOUtYli6ylNL0bJ6Ui6xMUp6BgBQbKiiFwqPLA40PNz0S/Zaf27UBt87IZjWub8YudwdQGx5YJTQi4smJhgvkU4GyIiI1NBycNrsJMQL4baOOwFo2bhBcw5OVP/HCNM/DwUqgRDa6MS2L0akBrq7AAVLxzHkzGaclE3Ywh4sKvHLLU2w4cNsGqUOJg1IdqrXydfN5cIRMDU4exlskIdqgNFAfdVR3a739cmB5LZvelXFTaQZqWoFD70rvAp+OCCVqbFTU0LboaNEavZF9MXKp45XCRVwpvcVLw3TFwALxGI2F+Brxqx5+ACODik/YBosHmiVYyYp+ErEd2iTIPiJ2Z5cKrD2KRHeLHz5QHCSP4orBn1DCjGzdJd68EaOOffRysE9muuvyHASn83S2AKhm8zItZ4BTOlvMM5qfnVOel2VsHThvC6a52O+/eUozPqf0ZSDe2u5d05S8lqZXcvSPEUr/EKHwfn+ZIErp/wi9OULSFsPgj9r6y98xQY8hLsOdk9dMWqR2H7CPhz9I2NjhcEl2Cm21+R5EHbH9Lwv/gbmLBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">fd9d96883bd85b1043fee5ac24e45a7d</block>
+        <comment/>
+        <connected_to>0625720b-4815-4795-9a89-51377da3b72d</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">07a2aed20f505350c9f026e800d1b243</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id>d9cb25e3-1440-4773-bd88-395b6aa6419a</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:16:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5ba2aed20f505350c9f026e800d1b2ec</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:26:19</sys_updated_on>
+        <ui_id>6ffcadc7-ce76-4294-ad74-c09c6990bde6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">ca9d96883bd85b1043fee5ac24e45a81</block>
+        <comment/>
+        <connected_to>d9cb25e3-1440-4773-bd88-395b6aa6419a</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="RITM - Filemaker (Add user to Entra ID group)">07a2aed20f505350c9f026e800d1b243</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:16:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>17a2aed20f505350c9f026e800d1b2fb</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:26:19</sys_updated_on>
+        <ui_id>72d05569-40ee-40fa-afbb-fd0d8a6c27e0</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=07a2aed20f505350c9f026e800d1b243"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=07a2aed20f505350c9f026e800d1b243"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_07a2aed20f505350c9f026e800d1b243"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>group_id</element>
+        <help/>
+        <hint/>
+        <label>Group ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_07a2aed20f505350c9f026e800d1b243</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:16:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4fa2aed20f505350c9f026e800d1b27b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="FileMaker Application" source="x_sogs_filemaker_a">19337c990f40d714c9f026e800d1b26f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 07:16:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>upn</element>
+        <help/>
+        <hint/>
+        <label>UPN</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_07a2aed20f505350c9f026e800d1b243</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 14:09:08</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>772140223b90539043fee5ac24e45ad2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="FileMaker Application" source="x_sogs_filemaker_a">19337c990f40d714c9f026e800d1b26f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:09:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>group_name</element>
+        <help/>
+        <hint/>
+        <label>Group Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_07a2aed20f505350c9f026e800d1b243</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 10:36:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7f9053963b58139043fee5ac24e45a46</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="FileMaker Application" source="x_sogs_filemaker_a">19337c990f40d714c9f026e800d1b26f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 10:36:57</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>requested_item</element>
+        <help/>
+        <hint/>
+        <label>Requested Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_07a2aed20f505350c9f026e800d1b243</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:16:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8fa2aed20f505350c9f026e800d1b2b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="FileMaker Application" source="x_sogs_filemaker_a">19337c990f40d714c9f026e800d1b26f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 07:16:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_07a2aed20f505350c9f026e800d1b243"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_07a2aed20f505350c9f026e800d1b243"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>4a622e520f505350c9f026e800d1b296</sys_id>
+        <latest_snapshot>07a2aed20f505350c9f026e800d1b243</latest_snapshot>
+        <compiler_build>glide-australia-02-11-2026__patch6w39-09-18-2026_09-23-2026_1520.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=4a622e520f505350c9f026e800d1b296"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=4a622e520f505350c9f026e800d1b296^sys_idNOT IN67a2eed20f505350c9f026e800d1b240"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_subflow_plan","id":"67a2eed20f505350c9f026e800d1b240","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <plan_id display_value="RITM - Filemaker (Add user to Entra ID group)">4a622e520f505350c9f026e800d1b296</plan_id>
+        <snapshot>ad5584ea3b90539043fee5ac24e45adc</snapshot>
+        <sys_class_name>sys_flow_subflow_plan</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-11-04 07:16:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>67a2eed20f505350c9f026e800d1b240</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-11-04 14:26:20</sys_updated_on>
+    </sys_flow_subflow_plan>
+</record_update>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="DELETE">
+        <active>true</active>
+        <application display_value="FileMaker Application">83449e3d0fcc1f14c9f026e800d1b2b0</application>
+        <filter/>
+        <name>FileMaker Approvers</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_sogs_filemaker_a.user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-10-21 07:17:26</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>68bc5af10f405f14c9f026e800d1b227</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FileMaker Approvers</sys_name>
+        <sys_package display_value="FileMaker Application" source="x_sogs_filemaker_a">19337c990f40d714c9f026e800d1b26f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_update_name>sys_ui_module_68bc5af10f405f14c9f026e800d1b227</sys_update_name>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-10-21 07:17:26</sys_updated_on>
+        <table>x_sogs_filemaker_a_filemaker_approver</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</application>
+        <comments/>
+        <file_path/>
+        <instance_id>282a0f0ba5880d00af9588dc6711e828</instance_id>
+        <instance_name>sgsdev</instance_name>
+        <name>sys_ui_module_68bc5af10f405f14c9f026e800d1b227</name>
+        <order/>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="FileMaker Application">83449e3d0fcc1f14c9f026e800d1b2b0</application><filter/><name>FileMaker Approvers</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>x_sogs_filemaker_a.user</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>rita.ramteke@insight.com</sys_created_by><sys_created_on>2026-10-21 07:17:26</sys_created_on><sys_customer_update>false</sys_customer_update><sys_domain>global</sys_domain><sys_id>68bc5af10f405f14c9f026e800d1b227</sys_id><sys_mod_count>0</sys_mod_count><sys_name>FileMaker Approvers</sys_name><sys_package display_value="FileMaker Application" source="x_sogs_filemaker_a">19337c990f40d714c9f026e800d1b26f</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope><sys_update_name>sys_ui_module_68bc5af10f405f14c9f026e800d1b227</sys_update_name><sys_updated_by>rita.ramteke@insight.com</sys_updated_by><sys_updated_on>2026-10-21 07:17:26</sys_updated_on><table>x_sogs_filemaker_a_filemaker_approver</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
+        <payload_hash>1798449361</payload_hash>
+        <record_name>FileMaker Approvers</record_name>
+        <reverted_from/>
+        <source>0f54b8d90f40d714c9f026e800d1b2cc</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-10-21 07:17:26</sys_created_on>
+        <sys_id>a0bc5af10f405f14c9f026e800d1b22c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a15d5272040000001</sys_recorded_at>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-10-21 07:17:26</sys_updated_on>
+        <type>Module</type>
+        <update_guid>60bc5af160405f1455db6c6bc654392b</update_guid>
+        <update_guid_history>60bc5af160405f1455db6c6bc654392b:1798449361</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rita.ramteke@insight.com</sys_created_by>
+        <sys_created_on>2026-10-30 11:59:29</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
+        <sys_id>5ee6930d11a04b858476e3a513df43c1</sys_id>
+        <sys_metadata>68bc5af10f405f14c9f026e800d1b227</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FileMaker Approvers</sys_name>
+        <sys_package display_value="FileMaker Application" source="x_sogs_filemaker_a">19337c990f40d714c9f026e800d1b26f</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="FileMaker Application">19337c990f40d714c9f026e800d1b26f</sys_scope>
+        <sys_scope_delete display_value="">a5f4d6dc5a19445fb54858a7c26cb6b1</sys_scope_delete>
+        <sys_update_name>sys_ui_module_68bc5af10f405f14c9f026e800d1b227</sys_update_name>
+        <sys_update_version display_value="sys_ui_module_68bc5af10f405f14c9f026e800d1b227">a0bc5af10f405f14c9f026e800d1b22c</sys_update_version>
+        <sys_updated_by>rita.ramteke@insight.com</sys_updated_by>
+        <sys_updated_on>2026-10-30 11:59:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

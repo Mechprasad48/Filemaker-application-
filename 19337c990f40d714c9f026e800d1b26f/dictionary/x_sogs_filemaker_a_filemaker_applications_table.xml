@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="141452f90fcc1f14c9f026e800d1b2a4" label="FileMaker Applications Table" max_length="40" name="x_sogs_filemaker_a_filemaker_applications_table" type="collection">
+        <element choice="1" label="Group Friendly Name" max_length="40" name="group_friendly_name" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Staff" value="Staff"/>
+                <element inactive_on_update="false" label="User" value="User"/>
+            </choice>
+        </element>
+        <element label="Backup Approver" max_length="32" name="backup_approver" reference="sys_user" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element display="true" label="Application Name" mandatory="true" max_length="40" name="application_name" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="FileMaker Server" mandatory="true" max_length="40" name="filemaker_server" type="string"/>
+        <element label="Group Description" max_length="40" name="group_description" type="string"/>
+        <element label="Primary Approver" max_length="32" name="approver_name" reference="sys_user" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element choice="1" label="Status" mandatory="true" max_length="40" name="status_filemaker" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Active" value="Active"/>
+            </choice>
+        </element>
+        <element label="Group Object ID" max_length="40" name="group_object_id" type="string"/>
+        <element label="Group Name" max_length="40" name="group_name" type="string"/>
+        <element choice="1" label="Application ID" mandatory="true" max_length="40" name="application_id" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Minn_Sales_Docs" sequence="1" value="Minn_Sales_Docs"/>
+            </choice>
+        </element>
+        <element choice="1" label="Approver Type" max_length="40" name="approver_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Primary" value="Primary"/>
+                <element inactive_on_update="false" label="Backup" value="Backup"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
+        <index name="index2">
+            <element name="backup_approver"/>
+        </index>
+        <index name="index3">
+            <element name="approver_name"/>
+        </index>
+    </element>
+</database>
